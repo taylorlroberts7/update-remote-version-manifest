@@ -41,8 +41,10 @@ jobs:
         id: get_tag_version
         run: |
           yarn version -v
+          echo "TAG_VERSION=$(yarn version -v)" >> $GITHUB_ENV
       - name: Get current version
         run: |
+          echo ${{ env.TAG_VERSION }}
           echo "steps.get_tag_version.outputs"
           echo ${{ toJSON(steps.get_tag_version.outputs) }}
           echo "steps.cut_release.outputs"
