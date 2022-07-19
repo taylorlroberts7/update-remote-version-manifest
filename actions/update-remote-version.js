@@ -27,7 +27,7 @@ module.exports = async () => {
     core.debug(JSON.stringify(decodedFile));
 
     const updatedManifest = {
-      ...decodedFile,
+      ...JSON.parse(decodedFile),
       [remoteKey]: remoteVersion,
     };
     const encodedManifest = Buffer.from(
