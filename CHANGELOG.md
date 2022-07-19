@@ -1,3 +1,10 @@
+### [1.0.19](https://github.com/taylorlroberts7/update-remote-version-manifest-action/compare/v1.0.18...v1.0.19) (2022-07-19)
+
+
+### Bug Fixes
+
+* input keys ([6d2d639](https://github.com/taylorlroberts7/update-remote-version-manifest-action/commit/6d2d6392443dfdbee0593a63d75a42e1afa8513f))
+
 ### [1.0.18](https://github.com/taylorlroberts7/update-remote-version-manifest-action/compare/v1.0.17...v1.0.18) (2022-07-19)
 
 
