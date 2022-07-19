@@ -44,7 +44,7 @@ jobs:
           echo "TAG_VERSION=$(npm pkg get version)" >> $GITHUB_ENV
       - name: Get current version
         run: |
-          echo ${{ env.TAG_VERSION }}
+          echo 'v${{ env.TAG_VERSION }}'
           echo "steps.get_tag_version.outputs"
           echo ${{ toJSON(steps.get_tag_version.outputs) }}
           echo "steps.cut_release.outputs"
