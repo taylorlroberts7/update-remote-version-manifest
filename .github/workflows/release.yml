@@ -30,25 +30,6 @@ jobs:
             ${{ runner.OS }}-
       - name: Install dependencies
         run: yarn
-      # - name: Cut release
-      #   id: cut_release
-      #   # run: yarn release
-      #   run: |
-      #     yarn release
-      #     echo "Event release tag"
-      #     echo ${{ github.event.release.tag_name }}
-      - name: Get the tag name
-        id: get_tag_version
-        run: |
-          yarn version -v
-          echo "TAG_VERSION=$(npm pkg get version)" >> $GITHUB_ENV
-      - name: Get current version
-        run: |
-          echo "v${{ env.TAG_VERSION }}"
-          echo "steps.get_tag_version.outputs"
-          echo ${{ toJSON(steps.get_tag_version.outputs) }}
-          echo "steps.cut_release.outputs"
-          echo ${{ toJSON(steps.cut_release.outputs) }}
-          echo ${{ github.event.release.tag_name }}
-          echo ${{ github.ref }}
-      
+      - name: Cut release
+        run: yarn release
+
