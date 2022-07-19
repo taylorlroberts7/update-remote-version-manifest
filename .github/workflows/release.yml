@@ -38,7 +38,9 @@ jobs:
           echo "Event release tag"
           echo ${{ github.event.release.tag_name }}
       - name: Get the tag name
-        run: echo "TAG=${GITHUB_REF:10}" >> $GITHUB_ENV
+        run: |
+          yarn version -v
+          echo "TAG=${yarn version -v}" >> $GITHUB_ENV
       - name: Get current version
         run: |
           echo ${{ env.TAG }}
