@@ -44,9 +44,9 @@ jobs:
       - name: Get current version
         run: |
           echo "steps.get_tag_version.outputs"
-          echo "${{ steps.get_tag_version.outputs }}"
+          echo ${{ toJSON(steps.get_tag_version.outputs) }}
           echo "steps.cut_release.outputs"
-          echo "${{ steps.cut_release.outputs }}"
+          echo ${{ toJSON(steps.cut_release.outputs) }}
           echo ${{ github.event.release.tag_name }}
           echo ${{ github.ref }}
       
