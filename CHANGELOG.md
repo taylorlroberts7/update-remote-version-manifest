@@ -1,3 +1,10 @@
+### [1.0.6](https://github.com/taylorlroberts7/update-remote-version-manifest-action/compare/v1.0.5...v1.0.6) (2022-07-19)
+
+
+### CI
+
+* get tag name why ([a705bdc](https://github.com/taylorlroberts7/update-remote-version-manifest-action/commit/a705bdc9871db137ac272a6146127099e3f463cd))
+
 ### [1.0.5](https://github.com/taylorlroberts7/update-remote-version-manifest-action/compare/v1.0.4...v1.0.5) (2022-07-19)
 
 
