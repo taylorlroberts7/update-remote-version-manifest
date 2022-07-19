@@ -1,3 +1,10 @@
+### [1.0.12](https://github.com/taylorlroberts7/update-remote-version-manifest-action/compare/v1.0.11...v1.0.12) (2022-07-19)
+
+
+### CI
+
+* echoing ([a18b7ca](https://github.com/taylorlroberts7/update-remote-version-manifest-action/commit/a18b7ca5ee216c745062b1ce3b5d03e510ed3647))
+
 ### [1.0.11](https://github.com/taylorlroberts7/update-remote-version-manifest-action/compare/v1.0.10...v1.0.11) (2022-07-19)
 
 
