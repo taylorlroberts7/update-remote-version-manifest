@@ -34,7 +34,7 @@
     ]
   },
   "main": "index.js",
-  "name": "update-remote-version-manifest",
+  "name": "update-remote-version-manifest-action",
   "repository": "https://github.com/taylorlroberts7/update-remote-version-manifest-action",
   "scripts": {
     "lint:staged:script": "eslint --fix",

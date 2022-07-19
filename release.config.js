@@ -1,6 +1,7 @@
 module.exports = {
   branches: ["main"],
-  repositoryUrl: "https://github.com/taylorlroberts7/increase-coverage-action",
+  repositoryUrl:
+    "https://github.com/taylorlroberts7/update-remote-version-manifest-action",
   plugins: [
     [
       "@semantic-release/commit-analyzer",
