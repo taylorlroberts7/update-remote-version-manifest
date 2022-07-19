@@ -35,6 +35,7 @@ jobs:
         # run: yarn release
         run: |
           yarn release
+          echo "Event release tag"
           echo ${{ github.event.release.tag_name }}
       - name: Get the tag name
         run: echo "TAG=${GITHUB_REF:10}" >> $GITHUB_ENV
