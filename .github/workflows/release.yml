@@ -40,7 +40,7 @@ jobs:
       - name: Get the tag name
         run: |
           yarn version -v
-          echo "TAG=${yarn version -v}" >> $GITHUB_ENV
+          echo "TAG=${{ yarn version -v }}" >> $GITHUB_ENV
       - name: Get current version
         run: |
           echo ${{ env.TAG }}
