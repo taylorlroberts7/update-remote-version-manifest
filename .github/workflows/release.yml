@@ -31,19 +31,22 @@ jobs:
       - name: Install dependencies
         run: yarn
       - name: Cut release
-        id: cut-release
+        id: cut_release
         # run: yarn release
         run: |
           yarn release
           echo "Event release tag"
           echo ${{ github.event.release.tag_name }}
       - name: Get the tag name
+        id: get_tag_version
         run: |
           yarn version -v
-          echo "TAG=${{ yarn version -v }}" >> $GITHUB_ENV
       - name: Get current version
         run: |
-          echo ${{ env.TAG }}
+          echo "steps.get_tag_version.outputs"
+          echo ${{ steps.get_tag_version.outputs }}
+          echo "steps.cut_release.outputs"
+          echo ${{ steps.cut_release.outputs }}
           echo ${{ github.event.release.tag_name }}
           echo ${{ github.ref }}
       
