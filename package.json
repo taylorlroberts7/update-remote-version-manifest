@@ -26,15 +26,9 @@
     "prettier": "^2.6.2",
     "semantic-release": "^19.0.2"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
-  },
   "license": "MIT",
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": [
+    "**/*.{js,jsx,ts,tsx}": [
       "yarn lint:staged:script",
       "prettier --write"
     ]
