@@ -34,7 +34,7 @@ jobs:
         id: cut-release
         run: yarn release
       - name: Get the tag name
-        run: echo "TAG=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
+        run: echo "TAG=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
       - name: Get current version
         run: echo ${{env.TAG}}
       
