@@ -1,3 +1,10 @@
+### [1.0.4](https://github.com/taylorlroberts7/update-remote-version-manifest-action/compare/v1.0.3...v1.0.4) (2022-07-19)
+
+
+### CI
+
+* get tag name ([8410ab8](https://github.com/taylorlroberts7/update-remote-version-manifest-action/commit/8410ab8e3603eca63922667788d076d5263f01bc))
+
 ### [1.0.3](https://github.com/taylorlroberts7/update-remote-version-manifest-action/compare/v1.0.2...v1.0.3) (2022-07-19)
 
 
