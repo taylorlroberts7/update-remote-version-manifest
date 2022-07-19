@@ -36,5 +36,8 @@ jobs:
       - name: Get the tag name
         run: echo "TAG=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
       - name: Get current version
-        run: echo ${{env.TAG}}
+        run: |
+          echo ${{ env.TAG }}
+          echo ${{ github.event.release.tag_name }}
+          echo ${{ github.ref }}
       
