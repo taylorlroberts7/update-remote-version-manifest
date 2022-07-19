@@ -1,3 +1,10 @@
+### [1.0.3](https://github.com/taylorlroberts7/update-remote-version-manifest-action/compare/v1.0.2...v1.0.3) (2022-07-19)
+
+
+### CI
+
+* fix syntax ([13360c2](https://github.com/taylorlroberts7/update-remote-version-manifest-action/commit/13360c26d6f20ded7bfe09f99712384775652d4e))
+
 ### [1.0.2](https://github.com/taylorlroberts7/update-remote-version-manifest-action/compare/v1.0.1...v1.0.2) (2022-07-19)
 
 
