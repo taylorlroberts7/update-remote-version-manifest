@@ -16,10 +16,10 @@ inputs:
   host-repo-owner:
     description: 'MFE Host repository owner (e.g. taylorlroberts7)'
     required: true
-  remoteKey:
+  remote-key:
     description: 'Key associated with your remote in the Remote manifest JSON file (e.g. authRemoteVersion)'
     required: true
-  remoteVersion:
+  remote-version:
     description: "The new version of your Remote that you want updated in the Host's Remote manifest JSON file (e.g. v1.3.7)"
     required: true
 runs:
