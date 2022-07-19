@@ -41,7 +41,7 @@ jobs:
         id: get_tag_version
         run: |
           yarn version -v
-          echo "TAG_VERSION=$(yarn version -v)" >> $GITHUB_ENV
+          echo "TAG_VERSION=$(npm pkg get version)" >> $GITHUB_ENV
       - name: Get current version
         run: |
           echo ${{ env.TAG_VERSION }}
