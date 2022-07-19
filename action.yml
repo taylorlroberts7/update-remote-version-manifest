@@ -1,0 +1,27 @@
+name: Update Remote Version Manifest
+description: Update's MFE Host's Remote Version Manifest File
+branding:
+  color: orange
+  icon: eye
+inputs:
+  filename:
+    description: "Name of your Host's Remote version manifest JSON file (e.g. remoteVersionManifest.json)"
+    required: true
+  github-token:
+    description: 'GitHub Personal Access Token with repo access'
+    required: true
+  host-repo-name:
+    description: 'Name of MFE Host repository (e.g. auth-remote)'
+    required: true
+  host-repo-owner:
+    description: 'MFE Host repository owner (e.g. taylorlroberts7)'
+    required: true
+  remoteKey:
+    description: 'Key associated with your remote in the Remote manifest JSON file (e.g. authRemoteVersion)'
+    required: true
+  remoteVersion:
+    description: "The new version of your Remote that you want updated in the Host's Remote manifest JSON file (e.g. v1.3.7)"
+    required: true
+runs:
+  using: 'node16'
+  main: 'index.js'
