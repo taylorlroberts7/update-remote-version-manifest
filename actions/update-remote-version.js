@@ -37,15 +37,12 @@ module.exports = async () => {
     const updateRes = await octokit.request(
       "PUT /repos/{owner}/{repo}/contents/{path}",
       {
-        owner: hostRepoOwner,
-        repo: hostRepoName,
-        path: filename,
-        message: `chore: update ${remoteKey} version`,
-        committer: {
-          name: "github_actions",
-          email: "octocat@github.com",
-        },
         content: encodedManifest,
+        message: `chore: update ${remoteKey} version`,
+        owner: hostRepoOwner,
+        path: filename,
+        repo: hostRepoName,
+        sha: res.data.sha,
       }
     );
 
