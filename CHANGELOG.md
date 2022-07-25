@@ -1,3 +1,10 @@
+### [1.0.20](https://github.com/taylorlroberts7/update-remote-version-manifest-action/compare/v1.0.19...v1.0.20) (2022-07-25)
+
+
+### Bug Fixes
+
+* add sha to update request ([ece4af3](https://github.com/taylorlroberts7/update-remote-version-manifest-action/commit/ece4af3cc6dfc6aac68a837373b8526f0ff7196f))
+
 ### [1.0.19](https://github.com/taylorlroberts7/update-remote-version-manifest-action/compare/v1.0.18...v1.0.19) (2022-07-19)
 
 
