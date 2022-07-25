@@ -18,9 +18,10 @@ module.exports = async () => {
     const res = await octokit.request(
       "GET /repos/{owner}/{repo}/contents/{path}",
       {
+        ref: branch || undefined,
         owner: hostRepoOwner,
-        repo: hostRepoName,
         path: filename,
+        repo: hostRepoName,
       }
     );
 
