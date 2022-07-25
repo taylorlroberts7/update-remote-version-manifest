@@ -1,3 +1,10 @@
+### [1.0.22](https://github.com/taylorlroberts7/update-remote-version-manifest-action/compare/v1.0.21...v1.0.22) (2022-07-25)
+
+
+### Bug Fixes
+
+* add branch to get request ([11c120e](https://github.com/taylorlroberts7/update-remote-version-manifest-action/commit/11c120e06b1915051422dc619aae98f477e849d3))
+
 ### [1.0.21](https://github.com/taylorlroberts7/update-remote-version-manifest-action/compare/v1.0.20...v1.0.21) (2022-07-25)
 
 
