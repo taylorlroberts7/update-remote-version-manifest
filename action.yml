@@ -4,6 +4,9 @@ branding:
   color: orange
   icon: eye
 inputs:
+  branch:
+    description: "Optional branch name"
+    required: false
   filename:
     description: "Name of your Host's Remote version manifest JSON file (e.g. remoteVersionManifest.json)"
     required: true

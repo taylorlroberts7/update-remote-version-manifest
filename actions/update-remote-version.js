@@ -3,12 +3,15 @@ const { Octokit } = require("octokit");
 
 module.exports = async () => {
   try {
+    const branch = core.getInput("branch");
     const filename = core.getInput("filename");
     const gitHubToken = core.getInput("github-token");
     const hostRepoName = core.getInput("host-repo-name");
     const hostRepoOwner = core.getInput("host-repo-owner");
     const remoteKey = core.getInput("remote-key");
     const remoteVersion = core.getInput("remote-version");
+
+    core.debug(`remoteVersion: ${remoteVersion}`);
 
     const octokit = new Octokit({ auth: gitHubToken });
 
@@ -23,13 +26,16 @@ module.exports = async () => {
 
     const decodedFile = Buffer.from(res.data.content, "base64").toString();
 
-    core.debug("Decode File");
+    core.debug("Decoded file");
     core.debug(JSON.stringify(decodedFile));
 
     const updatedManifest = {
       ...JSON.parse(decodedFile),
       [remoteKey]: remoteVersion,
     };
+    core.debug("Updated manifest");
+    core.debug(JSON.stringify(updatedManifest));
+
     const encodedManifest = Buffer.from(
       JSON.stringify(updatedManifest)
     ).toString("base64");
@@ -37,6 +43,7 @@ module.exports = async () => {
     const updateRes = await octokit.request(
       "PUT /repos/{owner}/{repo}/contents/{path}",
       {
+        branch: branch || undefined,
         content: encodedManifest,
         message: `chore: update ${remoteKey} version`,
         owner: hostRepoOwner,
