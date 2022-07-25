@@ -1,3 +1,10 @@
+### [1.0.21](https://github.com/taylorlroberts7/update-remote-version-manifest-action/compare/v1.0.20...v1.0.21) (2022-07-25)
+
+
+### Bug Fixes
+
+* trigger release ([855aed1](https://github.com/taylorlroberts7/update-remote-version-manifest-action/commit/855aed15a31b4cb67da4943917a6829a2803e808))
+
 ### [1.0.20](https://github.com/taylorlroberts7/update-remote-version-manifest-action/compare/v1.0.19...v1.0.20) (2022-07-25)
 
 
