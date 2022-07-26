@@ -9,7 +9,7 @@ module.exports = async () => {
     const hostRepoName = core.getInput("host-repo-name");
     const hostRepoOwner = core.getInput("host-repo-owner");
     const remoteKey = core.getInput("remote-key");
-    const remoteVersion = core.getInput("remote-version");
+    const remoteVersion = core.getInput("remote-version").replace(/\"/g, "");
 
     core.debug(`remoteVersion: ${remoteVersion}`);
 
@@ -29,6 +29,12 @@ module.exports = async () => {
 
     core.debug("Decoded file");
     core.debug(JSON.stringify(decodedFile));
+
+    if (!decodedFile[remoteKey]) {
+      return core.setFailed(
+        `${remoteKey} does not exist in remote version manifest`
+      );
+    }
 
     const updatedManifest = {
       ...JSON.parse(decodedFile),
