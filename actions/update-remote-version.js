@@ -15,14 +15,19 @@ module.exports = async () => {
 
     const octokit = new Octokit({ auth: gitHubToken });
 
+    const getOptions = {
+      owner: hostRepoOwner,
+      path: filename,
+      repo: hostRepoName,
+    };
+
+    if (branch) {
+      getOptions.ref = branch;
+    }
+
     const res = await octokit.request(
       "GET /repos/{owner}/{repo}/contents/{path}",
-      {
-        ref: branch || undefined,
-        owner: hostRepoOwner,
-        path: filename,
-        repo: hostRepoName,
-      }
+      getOptions
     );
 
     const decodedFile = Buffer.from(res.data.content, "base64").toString();
@@ -47,17 +52,22 @@ module.exports = async () => {
       JSON.stringify(updatedManifest)
     ).toString("base64");
 
+    const updateOptions = {
+      content: encodedManifest,
+      message: `chore: update ${remoteKey} version`,
+      owner: hostRepoOwner,
+      path: filename,
+      repo: hostRepoName,
+      sha: res.data.sha,
+    };
+
+    if (branch) {
+      updateOptions.branch = branch;
+    }
+
     const updateRes = await octokit.request(
       "PUT /repos/{owner}/{repo}/contents/{path}",
-      {
-        branch: branch || undefined,
-        content: encodedManifest,
-        message: `chore: update ${remoteKey} version`,
-        owner: hostRepoOwner,
-        path: filename,
-        repo: hostRepoName,
-        sha: res.data.sha,
-      }
+      updateOptions
     );
 
     core.debug("GitHub API PUT response");
