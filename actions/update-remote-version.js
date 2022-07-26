@@ -30,7 +30,7 @@ module.exports = async () => {
     core.debug("Decoded file");
     core.debug(JSON.stringify(decodedFile));
 
-    if (!decodedFile[remoteKey]) {
+    if (!JSON.parse(decodedFile)[remoteKey]) {
       return core.setFailed(
         `${remoteKey} does not exist in remote version manifest`
       );
