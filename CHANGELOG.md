@@ -1,3 +1,10 @@
+### [1.0.23](https://github.com/taylorlroberts7/update-remote-version-manifest-action/compare/v1.0.22...v1.0.23) (2022-07-26)
+
+
+### Bug Fixes
+
+* add parsing ([cb5fc48](https://github.com/taylorlroberts7/update-remote-version-manifest-action/commit/cb5fc485761a1f362b7ab1ab43699b987b3700cf))
+
 ### [1.0.22](https://github.com/taylorlroberts7/update-remote-version-manifest-action/compare/v1.0.21...v1.0.22) (2022-07-25)
 
 
