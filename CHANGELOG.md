@@ -1,3 +1,10 @@
+### [1.0.24](https://github.com/taylorlroberts7/update-remote-version-manifest-action/compare/v1.0.23...v1.0.24) (2022-07-26)
+
+
+### Bug Fixes
+
+* parse json ([68d44c9](https://github.com/taylorlroberts7/update-remote-version-manifest-action/commit/68d44c921a801c7f930400a98bec089bf01ff804))
+
 ### [1.0.23](https://github.com/taylorlroberts7/update-remote-version-manifest-action/compare/v1.0.22...v1.0.23) (2022-07-26)
 
 
