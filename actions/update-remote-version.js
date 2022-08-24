@@ -48,6 +48,11 @@ module.exports = async () => {
     core.debug("Updated manifest");
     core.debug(JSON.stringify(updatedManifest));
 
+    if (decodedFile === JSON.stringify(updatedManifest)) {
+      core.info("No change in remote version manifest");
+      return;
+    }
+
     const encodedManifest = Buffer.from(
       JSON.stringify(updatedManifest)
     ).toString("base64");
