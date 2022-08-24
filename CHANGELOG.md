@@ -1,3 +1,10 @@
+### [1.0.26](https://github.com/taylorlroberts7/update-remote-version-manifest-action/compare/v1.0.25...v1.0.26) (2022-08-24)
+
+
+### Bug Fixes
+
+* return when versions do not change ([4d23fc6](https://github.com/taylorlroberts7/update-remote-version-manifest-action/commit/4d23fc6ace8a04737ffa29f020197266e306883b))
+
 ### [1.0.25](https://github.com/taylorlroberts7/update-remote-version-manifest-action/compare/v1.0.24...v1.0.25) (2022-07-26)
 
 
